@@ -1,0 +1,80 @@
+{
+  "questions": [
+    {
+      "question": "How are you feeling today?",
+      "answers": [
+        {
+          "answer": "Good",
+          "score": 1
+        },
+        {
+          "answer": "Great",
+          "score": 2
+        },
+        {
+          "answer": "Grand!",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "question": "What is your favorite color?",
+      "answers": [
+        {
+          "answer": "Blue",
+          "score": 1
+        },
+        {
+          "answer": "Red",
+          "score": 2
+        },
+        {
+          "answer": "Green",
+          "score": 3
+        },
+        {
+          "answer": "Other",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "question": "Have you been watching the Winter Olympics?",
+      "answers": [
+        {
+          "answer": "Yes",
+          "score": 1
+        },
+        {
+          "answer": "No",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "question": "Where do you live?",
+      "answers": [
+        {
+          "answer": "Manhattan",
+          "score": 1
+        },
+        {
+          "answer": "New Jersey",
+          "score": 2
+        },
+        {
+          "answer": "Brooklyn",
+          "score": 3
+        },
+        {
+          "answer": "Queens",
+          "score": 4
+        },
+        {
+          "answer": "Other",
+          "score": 5
+        }
+      ]
+    }
+  ]
+}

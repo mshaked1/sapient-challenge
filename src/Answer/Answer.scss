@@ -1,0 +1,19 @@
+.answer-button {
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  box-shadow: 2px 3px grey;
+  background: radial-gradient(circle, rgb(168, 168, 168), rgb(228, 227, 227));
+
+  &:hover {
+    background: radial-gradient(circle, lightgrey, rgb(168, 168, 168));
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+
+  &.selected {
+    box-shadow: 2px 3px #00BADA;
+  }
+}

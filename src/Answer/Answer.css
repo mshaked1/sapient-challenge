@@ -1,0 +1,12 @@
+.answer-button {
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  box-shadow: 2px 3px grey;
+  background: radial-gradient(circle, #a8a8a8, #e4e3e3); }
+  .answer-button:hover {
+    background: radial-gradient(circle, lightgrey, #a8a8a8); }
+  .answer-button:focus {
+    outline: none !important; }
+  .answer-button.selected {
+    box-shadow: 2px 3px #00BADA; }
