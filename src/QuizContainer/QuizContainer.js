@@ -1,50 +1,44 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import QuestionContainer from '../QuestionContainer/QuestionContainer';
-import quizData from '../assets/quiz.json';
+import { selectAnswer, goBack, refreshQuiz } from '../actions';
 import './QuizContainer.css';
 
-class QuizContainer extends Component {
-  state = {
-    activeQuestion: 0,
-    answers: [],
-    score: 0,
-  };
+const QuizContainer = ({ question, selectAnswer, goBack, allAnswers, score, refreshQuiz }) => {
+  return(
+  <div className="app-container">
+    <QuestionContainer
+      question={question}
+      selectAnswer={selectAnswer}
+      goBack={goBack}
+      allAnswers={allAnswers}
+      score={score}
+      refreshQuiz={refreshQuiz}
+    />
+  </div>
+)}
+const mapStateToProps = state => ({
+  question: { index: state.reducer.activeQuestion, ...state.reducer.quizData.questions[state.reducer.activeQuestion]},
+  allAnswers: state.reducer.answers,
+  score: state.reducer.score
+})
 
-  selectAnswer = (answer) => {
-    const answers = [...this.state.answers];
-    const activeQuestion = this.state.activeQuestion + 1;
-    answers[this.state.activeQuestion] = answer;
-    const score = answers.reduce((total, current) => (total + current.score), 0);
-    this.setState({ answers, score, activeQuestion });
-  }
+const mapDispatchToProps = dispatch => bindActionCreators({
+  selectAnswer: (index) => selectAnswer(index),
+  goBack: (index) => goBack(index),
+  refreshQuiz: () => refreshQuiz()
+}, dispatch);
 
-  goBack = (answer) => {
-    const activeQuestion = answer - 1;
-    this.setState({ activeQuestion });
-  };
-
-  refreshQuiz = () => {
-    this.setState({
-      activeQuestion: 0,
-      answers: [],
-      score: 0
-    })
-  }
-
-  render() {
-    return (
-      <div className="app-container">
-        <QuestionContainer
-          question={{index: this.state.activeQuestion, ...quizData.questions[this.state.activeQuestion]}}
-          selectAnswer={this.selectAnswer}
-          goBack={this.goBack}
-          allAnswers={this.state.answers}
-          score={this.state.score}
-          refreshQuiz={this.refreshQuiz}
-        />
-      </div>
-    )
+QuizContainer.defaultProps = {
+  question: {
+    index: 0,
+    question: 'Fetching questions',
+    answers: []
   }
 }
 
-export default QuizContainer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(QuizContainer);

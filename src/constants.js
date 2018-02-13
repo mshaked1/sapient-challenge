@@ -1,0 +1,5 @@
+export const REQUEST_QUIZ_DATA = 'REQUEST_QUIZ_DATA';
+export const SUBMIT_QUIZ_DATA = 'SUBMIT_QUIZ_DATA';
+export const SELECT_ANSWER = 'SELECT_ANSWER';
+export const GO_BACK = 'GO_BACK';
+export const REFRESH_QUIZ = 'REFRESH_QUIZ';

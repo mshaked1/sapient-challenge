@@ -21,16 +21,15 @@ const QuestionContainer = ({ question, selectAnswer, goBack, allAnswers, score, 
           {question.question}
           </div>
           <div className="answers-container">
-            {question.answers.map(answer => (
-              <Answer
+            {question.answers.map(answer => (<Answer
                 key={answer.score}
                 answer={answer}
                 selectAnswer={selectAnswer}
-                selected={allAnswers[question.index] && (allAnswers[question.index].score === answer.score)}
+                selected={allAnswers[question.index] && (allAnswers[question.index] === answer.score)}
               /> 
             ))}
           </div>
-        </div>:
+        </div> :
         <div className="score-box">
           <div>
             Your total score is { score }
