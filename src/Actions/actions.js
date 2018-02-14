@@ -10,7 +10,6 @@ export function fetchQuizData() {
 }
 
 export function selectAnswer(answer) {
-  console.log(answer);
   return { type: actions.SELECT_ANSWER, answer };
 }
 
