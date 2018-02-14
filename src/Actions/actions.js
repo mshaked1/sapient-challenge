@@ -1,5 +1,5 @@
 import * as actions from './constants';
-import quizData from './assets/quiz.json';
+import quizData from '../assets/quiz.json';
 
 export function requestQuizData() {
   return dispatch => dispatch(fetchQuizData());

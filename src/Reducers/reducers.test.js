@@ -1,6 +1,6 @@
 import reducer from './reducers';
-import * as types from './constants';
-import quizData from './assets/quiz.json';
+import * as types from '../Actions/constants';
+import quizData from '../assets/quiz.json';
 
 const initialState = {
   activeQuestion: 0,

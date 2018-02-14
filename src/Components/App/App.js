@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import QuizContainer from '../QuizContainer/QuizContainer';
-import { requestQuizData } from '../actions';
+import { requestQuizData } from '../../Actions/actions';
 import './App.css';
 
 export class App extends Component {

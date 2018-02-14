@@ -1,4 +1,4 @@
-import * as actions from './constants';
+import * as actions from '../Actions/constants';
 
 const initialState = {
   activeQuestion: 0,

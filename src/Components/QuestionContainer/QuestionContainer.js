@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BackArrow from '../assets/prev.jpg';
+import BackArrow from '../../assets/prev.jpg';
 import Answer from '../Answer/Answer';
 import './QuestionContainer.css';
 

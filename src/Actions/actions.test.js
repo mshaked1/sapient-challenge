@@ -2,7 +2,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import * as actions from './actions';
 import * as types from './constants';
-import quizData from './assets/quiz.json';
+import quizData from '../assets/quiz.json';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

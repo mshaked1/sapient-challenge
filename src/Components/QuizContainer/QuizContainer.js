@@ -2,7 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import QuestionContainer from '../QuestionContainer/QuestionContainer';
-import { selectAnswer, goBack, refreshQuiz } from '../actions';
+import { selectAnswer, goBack, refreshQuiz } from '../../Actions/actions';
 import './QuizContainer.css';
 
 const QuizContainer = ({ question, selectAnswer, goBack, allAnswers, score, refreshQuiz }) => {
